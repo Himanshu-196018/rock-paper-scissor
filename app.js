@@ -4,6 +4,7 @@ const userScore_Span = document.getElementById('user-score');
 const compScore_Span = document.getElementById('computer-score');
 const scoreboard_div = document.getElementById('.score-board');
 const result_div = document.getElementById('write');
+const cmpChose = document.getElementById('cmp');
 const rock_div = document.getElementById('rock');
 const paper_div = document.getElementById('paper');
 const scissor_div = document.getElementById('scissor');
@@ -35,6 +36,7 @@ function draw(){
 
 function game(userChoice){
     const computerChoice = getComputerChoice();
+    cmpChose.innerHTML = `Comp chose ${computerChoice}`;
     switch(userChoice + computerChoice){
         case 'RockScissor':
         case 'PaperRock' :
